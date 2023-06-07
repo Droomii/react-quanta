@@ -1,0 +1,18 @@
+{
+  "name": "react-quanta",
+  "version": "1.0.1",
+  "description": "A simple react state management library",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./dist"
+  },
+  "author": "Dowoo Kim",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^5.1.3"
+  }
+}

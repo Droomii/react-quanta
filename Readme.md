@@ -1,4 +1,5 @@
 # react-quanta
+[![NPM Version](https://img.shields.io/npm/v/react-quanta?style=flat-square)](https://www.npmjs.com/package/react-quanta)
 
 react-quanta is a simple state management library for React.
 

@@ -32,7 +32,7 @@ const entanglerComponent = <T,>({ watch, children }: Props<T>) => {
 };
 
 export const Entangler = memo(entanglerComponent, (before, after) => {
-  const beforeWatchlist = (Array.isArray(before.watch) ? before.watch : [before.watch]).map(v => v.value);
-  const afterWatchlist = (Array.isArray(after.watch) ? after.watch : [after.watch]).map(v => v.value);
+  const beforeWatchlist = (Array.isArray(before.watch) ? before.watch : [before.watch]);
+  const afterWatchlist = (Array.isArray(after.watch) ? after.watch : [after.watch]);
   return arraysEqual(beforeWatchlist, afterWatchlist);
 });

@@ -30,6 +30,14 @@ class QuantumClass<T> implements Quantum<T>, SubscribableQuantum<T> {
       throw TypeError('Functions cannot be quantized.')
     }
 
+    if (initialValue && typeof initialValue === 'object') {
+      for (const key in initialValue) {
+        if (key in this) {
+          console.warn(`property name collision warning: getter/method '${key}' will be masked by the property of provided value.`)
+        }
+      }
+    }
+
     this._initialValue = JSON.parse(JSON.stringify(initialValue));
     this._value = JSON.parse(JSON.stringify(initialValue));
     this.setValue = this.setValue.bind(this);
@@ -118,7 +126,6 @@ class QuantumClass<T> implements Quantum<T>, SubscribableQuantum<T> {
     return this._value as T extends Array<infer U> ? never : T;
   }
 }
-
 
 export type Quantized<T> =
   Quantum<T>

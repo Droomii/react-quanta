@@ -141,10 +141,10 @@ class QuantumClass<T> implements Quantum<T>, SubscribableQuantum<T> {
         }
       }
 
-      return unwrapped as T extends unknown[] ? never : T;
+      return unwrapped as T extends Array<infer U> ? never : T;
     }
 
-    return this._value as T extends unknown[] ? never : T;
+    return this._value as T extends Array<infer U> ? never : T;
   }
 }
 

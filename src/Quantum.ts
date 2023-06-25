@@ -84,8 +84,10 @@ class QuantumClass<T> implements Quantum<T>, SubscribableQuantum<T> {
             ? this._value.filter((v) => !!v)
             : { ...this._value }
         ) as T
+      } else if (json && typeof json === 'object') {
+        this._value = quantize(json).value;
       } else {
-        this._value = json
+        this._value = json;
       }
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-quanta",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple react state management library",
   "main": "index.js",
   "scripts": {

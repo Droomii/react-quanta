@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any,@typescript-eslint/ban-types */
-import { type Dispatch, type SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { deepEqual } from './object';
 
 type Setter<T> = Dispatch<SetStateAction<T>>;

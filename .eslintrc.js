@@ -14,6 +14,7 @@ module.exports = {
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "react/prop-types": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
     "react/no-unescaped-entities": "off",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",

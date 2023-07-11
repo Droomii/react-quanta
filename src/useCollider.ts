@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { type Quantum, type SubscribableQuantum } from './Quantum';
+import { Quantum, SubscribableQuantum } from './Quantum';
 
 export const useCollider = <T>(collider: () => T, deps: Quantum[]) => {
   const [state, setState] = useState<T>(collider());

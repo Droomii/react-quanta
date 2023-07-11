@@ -141,10 +141,10 @@ class QuantumClass<T> implements Quantum<T>, SubscribableQuantum<T> {
         }
       }
 
-      return unwrapped as T extends Array<infer U> ? never : T;
+      return unwrapped as T extends [] ? never : T;
     }
 
-    return this._value as T extends Array<infer U> ? never : T;
+    return this._value as T extends [] ? never : T;
   }
 }
 
@@ -159,9 +159,7 @@ export type Quantized<T> = Quantum<T> &
       }
     : Quantum<T>);
 
-export function quantize<T>(
-  value: T
-): T extends Function ? never : Quantized<T> {
+export function quantize<T>(value: T): Quantized<T> {
   if (typeof value === 'function') {
     throw TypeError('Functions cannot be quantized.');
   }
